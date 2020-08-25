@@ -21,6 +21,7 @@ export class GoogleDriveFileProvider implements IFileProvider {
                     q: `'${parentFolderId}' in parents and trashed = false`,
                     orderBy: 'folder,name',
                     pageSize: 1000,
+                    //should add params here to access drives, maybe need to get first and store/list?
                     fields: 'nextPageToken, files(id, name, iconLink, mimeType, size, modifiedTime, createdTime)'
                 };
                 const callbackFn = (err: any, res: any) => {

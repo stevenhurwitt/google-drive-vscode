@@ -5,7 +5,8 @@ import * as fs from "fs";
 import { CONFIGURE_CREDENTIALS_COMMAND } from "../extension";
 
 // If modifying these scopes, delete token.json.
-const SCOPES = ['https://www.googleapis.com/auth/drive.file'];
+// make a prompt to access drive or drive.file (all files or only those uploaded thru vsc?)
+const SCOPES = ['https://www.googleapis.com/auth/drive'];
 
 export class DriveAuthenticator {
 
